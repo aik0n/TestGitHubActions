@@ -1,0 +1,15 @@
+name: .NET Release CI/CD Test
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  test-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test output message
+        run: |
+          echo "test message"
