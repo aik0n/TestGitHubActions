@@ -6,10 +6,12 @@ on:
       - 'v*.*.*'
 
 jobs:
-  test-publish:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Test output message
-        run: |
-          echo "test message"
+  build-and-test:
+    name: Build and Test Application
+    uses: aik0n/GitHub-Actions/.github/workflows/dotnet/build-and-test.yml@main
+    with:
+      dotnet-version: '8.0.x'
+      project-path: './src'
+      build-configuration: 'Release'
+      run-tests: true
+      collect-coverage: true
