@@ -8,10 +8,10 @@ on:
 jobs:
   build-and-test:
     name: Build and Test Application
-    uses: aik0n/GitHub-Actions/.github/workflows/dotnet/build-and-test.yml@main
+    uses: aik0n/GitHub-Actions/.github/workflows/dotnet-build-and-test.yml@main
     with:
       dotnet-version: '8.0.x'
-      project-path: './src'
+      project-path: './WebApp'
       build-configuration: 'Release'
       run-tests: true
       collect-coverage: true
