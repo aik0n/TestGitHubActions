@@ -12,7 +12,8 @@ jobs:
     with:
       dotnet-version: '8.0.x'
       project-path: './WebApp'
-      test-project-path: './Tests/WebApp.Tests.Unit'
+      test-project-path: './Tests/WebApp.Tests.Unit/WebApp.Tests.Unit.csproj'
       build-configuration: 'Release'
+      test-verbosity: 'detailed'
       run-tests: true
       collect-coverage: true
